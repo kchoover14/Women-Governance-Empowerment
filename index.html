@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kara C. Hoover">
+<meta name="dcterms.date" content="2023-10-29">
+
+<title>The Presence of Women in Governance is Positively Correlated with Women’s Empowerment across Regions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="womEmp_files/libs/clipboard/clipboard.min.js"></script>
+<script src="womEmp_files/libs/quarto-html/quarto.js"></script>
+<script src="womEmp_files/libs/quarto-html/popper.min.js"></script>
+<script src="womEmp_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="womEmp_files/libs/quarto-html/anchor.min.js"></script>
+<link href="womEmp_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="womEmp_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="womEmp_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="womEmp_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="womEmp_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary-of-research-question-and-findings" id="toc-summary-of-research-question-and-findings" class="nav-link active" data-scroll-target="#summary-of-research-question-and-findings">Summary of Research Question and Findings</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a>
+  <ul class="collapse">
+  <li><a href="#two-measures-of-democracy-from-the-v-dem-dataset" id="toc-two-measures-of-democracy-from-the-v-dem-dataset" class="nav-link" data-scroll-target="#two-measures-of-democracy-from-the-v-dem-dataset">Two measures of democracy from the V-Dem dataset</a></li>
+  <li><a href="#two-measures-of-womens-empowerment-from-the-world-bank-dataset" id="toc-two-measures-of-womens-empowerment-from-the-world-bank-dataset" class="nav-link" data-scroll-target="#two-measures-of-womens-empowerment-from-the-world-bank-dataset">Two Measures of Women’s Empowerment from the World Bank dataset</a></li>
+  </ul></li>
+  <li><a href="#there-is-a-strong-positive-correlation-between-democracy-and-womens-empowerment" id="toc-there-is-a-strong-positive-correlation-between-democracy-and-womens-empowerment" class="nav-link" data-scroll-target="#there-is-a-strong-positive-correlation-between-democracy-and-womens-empowerment">There is a strong positive correlation between democracy and women’s empowerment</a></li>
+  <li><a href="#womens-representation-and-educational-equality-african-countries-exhibit-positive-change-and-the-west-remains-consistently-high" id="toc-womens-representation-and-educational-equality-african-countries-exhibit-positive-change-and-the-west-remains-consistently-high" class="nav-link" data-scroll-target="#womens-representation-and-educational-equality-african-countries-exhibit-positive-change-and-the-west-remains-consistently-high">Women’s Representation and Educational Equality: African Countries Exhibit Positive Change and the West Remains Consistently High</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#appendix-summary-statistics-for-womens-empowerment-by-region" id="toc-appendix-summary-statistics-for-womens-empowerment-by-region" class="nav-link" data-scroll-target="#appendix-summary-statistics-for-womens-empowerment-by-region">Appendix: Summary Statistics for Women’s Empowerment by Region</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Presence of Women in Governance is Positively Correlated with Women’s Empowerment across Regions</h1>
+<p class="subtitle lead">Deviations from expected patterns are found at the country level</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">animated data visualization | democracy | women’s empowerment</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kara C. Hoover </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 29, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="summary-of-research-question-and-findings" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-research-question-and-findings">Summary of Research Question and Findings</h2>
+<p>Norris (2006) argues that the electoral system’s fundamental type is paramount in fostering inclusivity within elected bodies. Specifically, she contends that proportional electoral systems, as exemplified in the Nordics, Netherlands, and Rwanda, facilitate greater success for women in both nomination and election processes. My examination centers suffrage and gender educational parity as potentially equally strong influences on governmental inclusivity. In other words, I question if proportional represenation is sufficient and ask if we also need to focus on women’s right to vote and have equal and equitable access to education.</p>
+<p>I found a high correlation among all variables analyzed, with mean data consistently ranking regions similarly, albeit with slight rank order discrepancies among middle-tier regions. However, examining median values and the interquartile range (IQR) reveals regional variations. Subsequently, a focused examination of select countries reveals divergences in pattern consistency, undermining (to a limited extent) Norris’s regional framework. Notably, affluent countries worldwide, affluent countries within each region, and the exemplary cases highlighted by Norris—particularly those displaying unexpectedly high levels of women’s empowerment within democratic contexts—are scrutinized.</p>
+<p>Localized studies may uncover distinct influential variables contingent upon geographical or trait-based considerations. I suggest a comprehensive approach integrating random forest analysis to traverse the breadth of women’s empowerment variables, coupled with subsequent regression trees spotlighting the most salient factors. While women’s representation ostensibly aligns with egalitarian democracy on a macroscopic scale, place-specific variables may disrupt this association. An anthropological lens suggests that a culture’s distinct values often permeate its governance, underscoring the overlooked disruption within political science’s approach to the issue.</p>
+</section>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+<section id="two-measures-of-democracy-from-the-v-dem-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="two-measures-of-democracy-from-the-v-dem-dataset">Two measures of democracy from the V-Dem dataset</h3>
+<p>Two metrics assessing democracy from the Varieties of Democracy (V-Dem) dataset were examined in this assignment: the Egalitarian Democracy Index (v2x_egaldem) and the Share of Population with Suffrage (v2x_suffr). The Egalitarian Democracy Index evaluates a country or region based on the degree of inequality hindering the exercise of formal rights and liberties. As the value approaches the lower end of the interval variable (0), citizens from various social strata encounter increasing limitations, resulting in unequal access to democratic participation. Conversely, nearing the upper end of the interval variable (1) signifies equal protection of rights and freedoms for individuals across all social groups, alongside equitable resource distribution and access to power. The Share of Population with Suffrage solely reflects suffrage as mandated by law, disregarding social barriers to voting. However, when juxtaposed with the first measure, it offers insight into countries or regions where legal constraints and inequity restrict participation.</p>
+</section>
+<section id="two-measures-of-womens-empowerment-from-the-world-bank-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="two-measures-of-womens-empowerment-from-the-world-bank-dataset">Two Measures of Women’s Empowerment from the World Bank dataset</h3>
+<p>Two additional data points were acquired from the World Bank dataset, ‘wbstats’: women’s representation in governance (SG.GEN.PARL.ZS) and gender parity in primary and secondary education (SE.ENR.PRSC.FM.ZS). Women’s representation refers to the percentage of women representing constituents at the national level, while gender parity in education is the ratio of female gross enrollment in primary and secondary schools to males enrolled in primary and secondary schools (both public and private). A ratio value of less than 1 indicates a male advantage in learning opportunities, whereas a ratio value greater than 1 suggests a female advantage. Education plays a crucial role in women’s empowerment, as it is closely tied to improved health and economic outcomes for women and children, as well as lower birth rates, which reduces resource stress. The two selected variables represent opposite stages of life history. Education enhances the status and capabilities of women, thereby enabling them to achieve national standing through elected roles in government. The visibility of women exercising their capabilities as elected officials further motivates females to excel in educational opportunities.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vdemdata); <span class="fu">library</span>(wbstats); <span class="fu">library</span>(countrycode)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse); <span class="fu">library</span>(grateful); <span class="fu">library</span>(psych)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor); <span class="fu">library</span>(glue); <span class="fu">library</span>(readr)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gganimate); <span class="fu">library</span>(gifski)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#get vedem data</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>democracy <span class="ot">&lt;-</span> vdem <span class="sc">|&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2003</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">country =</span> country_name, </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">vDemCtryId =</span> country_id,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    year,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">egalDem =</span> v2x_egaldem, </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">suff =</span> v2x_suffr,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">region =</span> e_regionpol_6C</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">region =</span> <span class="fu">case_match</span>(region, </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Eastern Europe"</span>, </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>     <span class="dv">2</span> <span class="sc">~</span> <span class="st">"Latin America"</span>,  </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>     <span class="dv">3</span> <span class="sc">~</span> <span class="st">"Middle East"</span>,   </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>     <span class="dv">4</span> <span class="sc">~</span> <span class="st">"Africa"</span>, </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>     <span class="dv">5</span> <span class="sc">~</span> <span class="st">"The West"</span>, </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>     <span class="dv">6</span> <span class="sc">~</span> <span class="st">"Asia"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># store indicators from World Bank</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>indicators <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'womenRep'</span><span class="ot">=</span><span class="st">'SG.GEN.PARL.ZS'</span>, <span class="st">'eduEqual'</span> <span class="ot">=</span> <span class="st">'SE.ENR.PRSC.FM.ZS'</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># download world bank data</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>womenEmp <span class="ot">&lt;-</span> <span class="fu">wb_data</span>(indicators, <span class="at">mrv=</span><span class="dv">50</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">!</span>iso2c) <span class="sc">|&gt;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">year =</span> date)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># VDEM data employs ISO3 codes, whereas World Bank data employs country names. </span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co"># map country names to ISO3 codes for merging</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>democracy <span class="ot">&lt;-</span> democracy <span class="sc">|&gt;</span>    </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">iso3c =</span> <span class="fu">countrycode</span>(</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">sourcevar =</span> vDemCtryId, </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin =</span> <span class="st">"vdem"</span>,         </span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">destination =</span> <span class="st">"wb"</span>))</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform left join using common iso3c variable and year</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>demWomen <span class="ot">&lt;-</span> <span class="fu">left_join</span>(democracy, womenEmp, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"iso3c"</span>, <span class="st">"year"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">country =</span> country.x) <span class="sc">|&gt;</span> <span class="co"># rename country.x, keep vdem country</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">!</span>country.y)             <span class="co"># crop country.y, drop wb country</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co"># check na</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>text1 <span class="ot">=</span> (<span class="st">"Missing cases for women's representation: "</span>) </span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>text2 <span class="ot">=</span> (<span class="st">"Missing cases for educational equality: "</span>) </span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>sum1 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(womenEmp<span class="sc">$</span>womenRep)) <span class="co">#6144 missing cases</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>sum2 <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(womenEmp<span class="sc">$</span>eduEqual)) <span class="co">#5257 missing cases</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">glue</span>({text1}, {sum1})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Missing cases for women's representation: 6209</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glue</span>({text2}, {sum2})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Missing cases for educational equality: 5691</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="there-is-a-strong-positive-correlation-between-democracy-and-womens-empowerment" class="level2">
+<h2 class="anchored" data-anchor-id="there-is-a-strong-positive-correlation-between-democracy-and-womens-empowerment">There is a strong positive correlation between democracy and women’s empowerment</h2>
+<p>The appendix presents summary statistics for the mean, median, and inter-quartile range of the women’s empowerment variables (suffrace, educational equality, and women’s representation in governance. Depending on the specific statistic employed, the rankings of countries on key variables may vary, while the regional patterns remain consistent.</p>
+<p>The correlation plot depicted below demonstrates a significant correlation between democracy and women’s empowerment. In this graphic representation, Pearson correlation coefficients are displayed above the diagonal (an asterisk denotes a p-value &lt; 0.05), histograms appear on the diagonal, and bivariate scatterplots are showcased below the diagonal. To facilitate interpretation of the relationship between variables, locally weighted smoothing (loess) has been applied to the scatterplots, smoothing the regression through the data. The argument <code>smooth.scatter</code> has been utilized to soften individual data points, imparting a visual akin to a density map, enhancing the comprehensibility of the scatterplots. Furthermore, density ellipses are employed to highlight the densest regions of the scatterplots, aiding in the visualization of outlier data points and elucidating the strength and direction of the correlation.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># move variables</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>demWomen <span class="ot">&lt;-</span> <span class="fu">relocate</span>(demWomen, iso3c, <span class="at">.before =</span> vDemCtryId)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>demWomen <span class="ot">&lt;-</span> <span class="fu">relocate</span>(demWomen, region, <span class="at">.before =</span> year)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># correlation test </span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs.panels</span>(demWomen[,<span class="dv">6</span><span class="sc">:</span><span class="dv">9</span>],<span class="at">lm=</span><span class="cn">TRUE</span>, <span class="at">cor=</span><span class="cn">TRUE</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">method =</span> <span class="st">"pearson"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">ellipses=</span><span class="cn">TRUE</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>             <span class="at">hist.col =</span> <span class="st">'lightsteelblue4'</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>             <span class="at">smoother=</span><span class="cn">TRUE</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>             <span class="at">pch=</span><span class="dv">21</span>, <span class="at">stars =</span> <span class="cn">TRUE</span>, <span class="at">ci=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="womEmp_files/figure-html/correlation-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="womens-representation-and-educational-equality-african-countries-exhibit-positive-change-and-the-west-remains-consistently-high" class="level2">
+<h2 class="anchored" data-anchor-id="womens-representation-and-educational-equality-african-countries-exhibit-positive-change-and-the-west-remains-consistently-high">Women’s Representation and Educational Equality: African Countries Exhibit Positive Change and the West Remains Consistently High</h2>
+<p>The analysis so far has focused on aggregates spanning a 20-year period to explore general associations. But, do these patterns evolve over time? The following visualization, employing <code>gganimate</code> and <code>gifski</code>, animates these dynamics year by year. It portrays gender parity in education along the x-axis, egalitarian democracy along the y-axis, point size corresponding to women’s representation values, and color representing different regions. Notably, the Western and Eastern European regions exhibit relatively static trends over time, while Africa showcases significant variation. With 55 diverse countries, Africa encompasses the bulk of global cultural and genetic diversity, coupled with significant post-colonial political upheavals, thereby explaining its pronounced temporal shifts. Additionally, the Middle East presents a dichotomy in educational gender parity, as evidenced by the disparities highlighted in the country-specific data for the top three affluent nations.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># make year an integer</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>demWomen<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(demWomen<span class="sc">$</span>year)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># animated plot</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(demWomen, <span class="fu">aes</span>(eduEqual, egalDem, <span class="at">size =</span> womenRep, <span class="at">colour =</span> region)) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  scale_size(range = c(2, 12)) +</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">#  scale_x_log10() +</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>region) <span class="sc">+</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">'Year: {frame_time}'</span>, <span class="at">x =</span> <span class="st">'Women Representation'</span>, <span class="at">y =</span> <span class="st">'Gender Education Parity'</span>) <span class="sc">+</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_time</span>(year)  <span class="sc">+</span>  </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">enter_fade</span>() <span class="sc">+</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">exit_fade</span>() <span class="sc">+</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ease_aes</span>(<span class="st">'linear'</span>) <span class="sc">+</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co"># slow animation</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="fu">animate</span>(p, <span class="at">nframes =</span> <span class="dv">200</span>, <span class="at">fps=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="womEmp_files/figure-html/gganimate-1.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="bibliography" class="level2">
+<h2 class="anchored" data-anchor-id="bibliography">Bibliography</h2>
+<p>Norris, P. (2006). The Impact of Electoral Reform on Women’s Representation. Acta Politica (2006) 41, 197–213. doi:10.1057/palgrave.ap.5500151</p>
+</section>
+<section id="appendix-summary-statistics-for-womens-empowerment-by-region" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-summary-statistics-for-womens-empowerment-by-region">Appendix: Summary Statistics for Women’s Empowerment by Region</h2>
+<p><strong>Summary Statistics by Region</strong></p>
+<p>Summary statistics by region are limited to mean, median, and interquartile range (IQR), excluding suffrage for IQR, which exhibits minimal variation at the regional level. Output tables are organized based on values for women’s representation.</p>
+<p><strong>Mean</strong>: Analysis of the summary statistics for all four variables reveals a notable pattern at the extreme ends of the scale: women’s representation values at both the high (The West) and low (The Middle East) ends tend to be the highest and lowest, respectively, for all other variables. Among the middle four regions, each region’s ranking shifts by one variable up or down. Notably, Latin America ranks second highest for women’s representation and egalitarian democracy, while Eastern Europe slightly surpasses it in the other two indicators. A distinct division emerges between The West, Latin America, and Eastern Europe, in contrast to Africa, Asia, and The Middle East.</p>
+<p><strong>Median</strong>: The same pattern persists, with a significant disparity in results for egalitarian democracy between the West, with a value of 0.7960, and the next highest value in Eastern Europe, which stands at 0.4175.</p>
+<p><strong>IQR</strong>: Latin America emerges as the frontrunner for Women’s Representation but ranks fourth in education parity, a surprising finding. Norris, however, observed that while affluence is commonly associated with proportional representation (PR), Mexico, along with a few less affluent countries such as Rwanda, Lithuania, and Czechia, experiences greater political success for women.</p>
+<p>Given that median and IQR values demonstrate intriguing lack of correlation across variables, further examination will be conducted at the country level.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Group summarize by mean and arrange by region</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>demSummaryRegionMean <span class="ot">&lt;-</span> demWomen <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region)  <span class="sc">|&gt;</span> <span class="co">#group by region</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(           <span class="co"># summarize vars (by region, above)</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">egalDem =</span> <span class="fu">mean</span>(egalDem, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">suff =</span> <span class="fu">mean</span>(suff, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">eduEqual =</span> <span class="fu">mean</span>(eduEqual, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">womenRep =</span> <span class="fu">mean</span>(womenRep, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(womenRep))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Group summarize by median and arrange by region</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>demSummaryRegionMedian <span class="ot">&lt;-</span> demWomen <span class="sc">|&gt;</span> </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region)  <span class="sc">|&gt;</span> <span class="co">#group by region</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(           <span class="co"># summarize vars (by region, above)</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">egalDem =</span> <span class="fu">median</span>(egalDem, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">suff =</span> <span class="fu">median</span>(suff, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">eduEqual =</span> <span class="fu">median</span>(eduEqual, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">womenRep =</span> <span class="fu">median</span>(womenRep, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(womenRep))</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Group summarize by IWR and arrange by region</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>demSummaryRegionIQR <span class="ot">&lt;-</span> demWomen <span class="sc">|&gt;</span> </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region)  <span class="sc">|&gt;</span> <span class="co">#group by region</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(           <span class="co"># summarize vars (by region, above)</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">egalDem =</span> <span class="fu">IQR</span>(egalDem, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">eduEqual =</span> <span class="fu">IQR</span>(eduEqual, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">womenRep =</span> <span class="fu">IQR</span>(womenRep, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(womenRep))</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="co"># view data</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>demSummaryRegionMean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  region         egalDem  suff eduEqual womenRep
+  &lt;chr&gt;            &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1 The West         0.781 1        1.00      30.4
+2 Latin America    0.431 1        1.01      24.5
+3 Eastern Europe   0.438 1        0.997     20.4
+4 Africa           0.278 0.988    0.923     19.8
+5 Asia             0.310 0.991    0.969     15.8
+6 Middle East      0.207 0.879    0.978     12.0</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>demSummaryRegionMedian</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  region         egalDem  suff eduEqual womenRep
+  &lt;chr&gt;            &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1 The West         0.791     1    1.00      32.2
+2 Latin America    0.406     1    1.01      22.2
+3 Eastern Europe   0.412     1    0.996     20  
+4 Africa           0.256     1    0.957     16.7
+5 Asia             0.274     1    1.00      16.0
+6 Middle East      0.18      1    0.994     10.5</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>demSummaryRegionIQR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  region         egalDem eduEqual womenRep
+  &lt;chr&gt;            &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1 Latin America   0.358    0.0380    17.1 
+2 Middle East     0.129    0.0546    16.8 
+3 The West        0.0740   0.0351    16.6 
+4 Africa          0.215    0.167     15.7 
+5 Asia            0.242    0.0649    14.6 
+6 Eastern Europe  0.345    0.0210     9.90</code></pre>
+</div>
+</div>
+<p><strong>Summary Statistics by Country</strong></p>
+<p>Output tables are organized based on values for country.</p>
+<p><strong>Mean</strong>: The data supported a general pattern of women’s representation correlating with related measures, although median and IQR summary statistics did not. These will be scrutinized in closer detail for a select group of countries: the most affluent ones (as Norris notes, the trend towards democracy often, but not always, correlates with egalitarianism), the top three affluent countries by OECD regions, and a few countries highlighted by Norris as deviating from overall trends (less affluent countries with higher women’s representation as mentioned earlier).</p>
+<p><strong>Median</strong>: Among the three most affluent countries (US, Japan, and China), women’s empowerment values were lower than in several less affluent countries, as noted by Norris. Mexico appears to be influencing the Latin American values significantly with a median of 36.8, compared to the next most affluent countries of Chile (5.04) and Brazil (3.12). Rwanda’s values (6.88) are lower than two of the most affluent African countries but higher than Nigeria (1.51). Countries identified by Norris as less affluent but with higher women’s representation (such as Czechia, Lithuania, and Rwanda) have lower values than many affluent countries across regions, with Mexico being the exception of lower affluence but higher women’s representation. As anticipated, the Middle East generally has the lowest values, with the UAE at 22.5, higher than the US, Japan, and China, which contrasts with the right to vote. The median value for the West was 30, but the median values for affluent countries in the West are much lower. The correlation between gender parity in education sometimes aligns with women’s representation and egalitarian democracy, but not consistently (Oman, for instance, exhibits high educational gender parity but low women’s representation).</p>
+<p><strong>IQR</strong>: Suffrage IQR is excluded. The IQR for women’s representation and educational gender parity does not show a strong relationship at the country level. For example, Rwanda has educational gender parity similar to China, but representation is almost twice the size. Egalitarian democracy also lacks a strong correlation: Saudi Arabia has the second-highest IQR for women’s representation (second only to Mexico), but the egalitarian democracy value is very small at 0.002. The highest value for egalitarian democracy is found in Brazil, yet women’s empowerment is very low (3.12).</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Group summarize by median and arrange by country</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>demSummaryCountryMedian <span class="ot">&lt;-</span> demWomen <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country)  <span class="sc">|&gt;</span> <span class="co">#group by country</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(           <span class="co"># summarize vars (by country, above)</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">womenRep =</span> <span class="fu">median</span>(womenRep, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">egalDem =</span> <span class="fu">median</span>(egalDem, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">suff =</span> <span class="fu">median</span>(suff, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">eduEqual =</span> <span class="fu">median</span>(eduEqual, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(country)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarize means in tables to bind</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="do">## most affluent countries</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>affluentMed1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'United States of America'</span>, <span class="st">'Japan'</span>, <span class="st">'China'</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>resultsMed.am <span class="ot">&lt;-</span> demSummaryCountryMedian <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentMed1)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="do">## Top 3 affluent countries in Western Europe</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>affluentMed2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Germany'</span>, <span class="st">'United Kingdom'</span>, <span class="st">'France'</span>)</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>resultsMed.eu <span class="ot">&lt;-</span> demSummaryCountryMedian <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentMed2)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Top 3 affluent countries in Latin America</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>affluentMed3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Mexico'</span>, <span class="st">'Brazil'</span>, <span class="st">'Chili'</span>)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>resultsMed.la <span class="ot">&lt;-</span> demSummaryCountryMedian <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentMed3)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="do">## Top 3 affluent countries in Africa</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>affluentMed4 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'South Africa'</span>, <span class="st">'Nigeria'</span>, <span class="st">'Kenya'</span>)</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>resultsMed.af <span class="ot">&lt;-</span> demSummaryCountryMedian <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentMed4)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="do">## Top 3 affluent countries in Middle East</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>affluentMed5 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'United Arab Emirates'</span>, <span class="st">'Oman'</span>, <span class="st">'Saudi Arabia'</span>, <span class="st">'United Arab Emirates'</span>)</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>resultsMed.me <span class="ot">&lt;-</span> demSummaryCountryMedian <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentMed5)</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a><span class="do">## Marked in Norris as interesting cases</span></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>interestMed<span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Rwanda'</span>, <span class="st">'Lithuania'</span>, <span class="st">'Czechia'</span>, <span class="st">'Netherlands'</span>)</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>resultsMed.norris <span class="ot">&lt;-</span> demSummaryCountryMedian <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> interestMed)</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="co"># bind mean tables</span></span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>comparativeMed<span class="ot">&lt;-</span> <span class="fu">rbind</span>(resultsMed.am, resultsMed.eu, resultsMed.la, resultsMed.af, resultsMed.me, resultsMed.norris)</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Group summarize by IQR and arrange by country</span></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>demSummaryCountryIQR <span class="ot">&lt;-</span> demWomen <span class="sc">|&gt;</span> </span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country)  <span class="sc">|&gt;</span> <span class="co">#group by country</span></span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(           <span class="co"># summarize vars (by country, above)</span></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">womenRep =</span> <span class="fu">round</span>(<span class="fu">IQR</span>(womenRep, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">digits=</span><span class="dv">3</span>),</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">egalDem =</span> <span class="fu">round</span>(<span class="fu">IQR</span>(egalDem, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">digits=</span><span class="dv">3</span>), </span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">eduEqual =</span> <span class="fu">round</span>(<span class="fu">IQR</span>(eduEqual, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">digits=</span><span class="dv">3</span>)</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(country)</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a><span class="co"># summarize IQR in tables to bind</span></span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>affluentIQR1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'United States of America'</span>, <span class="st">'Japan'</span>, <span class="st">'China'</span>)</span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>resultsIQR.am <span class="ot">&lt;-</span> demSummaryCountryIQR <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentIQR1)</span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 3 affluent countries in Western Europe</span></span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>affluentIQR2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Germany'</span>, <span class="st">'United Kingdom'</span>, <span class="st">'France'</span>)</span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>resultsIQR.eu <span class="ot">&lt;-</span> demSummaryCountryIQR <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentIQR2)</span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 3 affluent countries in Latin America</span></span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a>affluentIQR3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Mexico'</span>, <span class="st">'Brazil'</span>, <span class="st">'Chile'</span>)</span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a>resultsIQR.la <span class="ot">&lt;-</span> demSummaryCountryIQR <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentIQR3)</span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 3 affluent countries in Africa</span></span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>affluentIQR4 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'South Africa'</span>, <span class="st">'Nigeria'</span>, <span class="st">'Kenya'</span>)</span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a>resultsIQR.af <span class="ot">&lt;-</span> demSummaryCountryIQR <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentIQR4)</span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 3 affluent countries in Middle East</span></span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a>affluentIQR5 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'United Arab Emirates'</span>, <span class="st">'Oman'</span>, <span class="st">'Saudi Arabia'</span>, <span class="st">'United Arab Emirates'</span>)</span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a>resultsIQR.me <span class="ot">&lt;-</span> demSummaryCountryIQR <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> affluentIQR5)</span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Marked in Norris as interesting cases</span></span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a>interestIQR <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Rwanda'</span>, <span class="st">'Lithuania'</span>, <span class="st">'Czechia'</span>, <span class="st">'Netherlands'</span>)</span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a>resultsIQR.norris <span class="ot">&lt;-</span> demSummaryCountryIQR <span class="sc">|&gt;</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> interestIQR)</span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a><span class="co"># bind IQR tables</span></span>
+<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a>comparativeIQR<span class="ot">&lt;-</span> <span class="fu">rbind</span>(resultsIQR.am, resultsIQR.eu, resultsIQR.la, resultsIQR.af, resultsIQR.me, resultsIQR.norris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><strong>Comparative Median Data for Selected Countries</strong></p>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># view data</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>comparativeMed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-medData" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-medData-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1
+</figcaption>
+<div aria-describedby="tbl-medData-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 18 × 5
+   country                  womenRep egalDem  suff eduEqual
+   &lt;chr&gt;                       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
+ 1 China                       23.4   0.0995  1       1.01 
+ 2 Japan                        9.58  0.764   1       1.00 
+ 3 United States of America    18.6   0.684   1       0.996
+ 4 France                      26.2   0.781   1       1.00 
+ 5 Germany                     32.8   0.826   1       0.965
+ 6 United Kingdom              22.5   0.743   1       1.01 
+ 7 Brazil                       9.45  0.61    1       1.02 
+ 8 Mexico                      37.1   0.333   1       1.02 
+ 9 Kenya                       18.9   0.318   1       0.952
+10 Nigeria                      5.83  0.282   1       0.897
+11 South Africa                42.2   0.514   1       1.00 
+12 Oman                         1.19  0.18    1       0.986
+13 Saudi Arabia                19.9   0.108   0       0.964
+14 United Arab Emirates        22.5   0.129   0.16    0.978
+15 Czechia                     21     0.788   1       1.01 
+16 Lithuania                   22.3   0.744   1       0.978
+17 Netherlands                 38.7   0.8     1       0.991
+18 Rwanda                      61.2   0.205   1       1.01 </code></pre>
+</div>
+</div>
+</figure>
+</div>
+<p><strong>Comparative IQR Data for Selected Countries</strong></p>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># view data</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>comparativeIQR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-IQRdata" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-IQRdata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2
+</figcaption>
+<div aria-describedby="tbl-IQRdata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 19 × 4
+   country                  womenRep egalDem eduEqual
+   &lt;chr&gt;                       &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+ 1 China                        3.61   0.013    0.016
+ 2 Japan                        1.04   0.021    0.001
+ 3 United States of America     6.70   0.1      0.009
+ 4 France                      19.3    0.026    0.005
+ 5 Germany                      3.45   0.018    0.017
+ 6 United Kingdom              12.5    0.019    0.009
+ 7 Brazil                       6.34   0.138    0.024
+ 8 Chile                        8.41   0.048    0.004
+ 9 Mexico                      23.5    0.033    0.019
+10 Kenya                       12.0    0.022    0.006
+11 Nigeria                      2.06   0.056    0.097
+12 South Africa                 9.53   0.02     0.009
+13 Oman                         2.33   0.007    0.019
+14 Saudi Arabia                19.9    0.002    0.02 
+15 United Arab Emirates        25.6    0.009    0.041
+16 Czechia                      5.38   0.043    0.002
+17 Lithuania                    3.46   0.043    0.021
+18 Netherlands                  3.17   0.02     0.026
+19 Rwanda                       5      0.01     0.019</code></pre>
+</div>
+</div>
+</figure>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

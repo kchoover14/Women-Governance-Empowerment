@@ -8,10 +8,19 @@ The [portfolio page](https://kchoover14.github.io/education-fosters-inclusive-go
 
 ## Tools & Technologies
 
-- **Languages:** R
-- **Tools:** RStudio, GitHub
-- **Packages:** `vdemdata`, `wbstats`, `countrycode`, `dplyr`, `ggplot2`, `gganimate`, `gifski`, `psych`, `glue`
+**Languages:** R
+**Tools:** RStudio | GitHub
+**Packages:** vdemdata | wbstats | countrycode | dplyr | ggplot2 | gganimate | gifski | psych | glue
 
 ## Expertise
 
 Synthesizing cross-national longitudinal data from multiple sources to evaluate competing theoretical frameworks -- identifying where regional-level patterns break down at finer scales and surfacing the place-specific variables that aggregate analyses obscure.
+
+## Environment
+
+- `renv.lock` and `renv/` -- restore package environment with `renv::restore()`
+
+## License
+
+- Code and scripts © Kara C. Hoover, licensed under the [MIT License](LICENSE).
+- Data, figures, and written content © Kara C. Hoover, licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).

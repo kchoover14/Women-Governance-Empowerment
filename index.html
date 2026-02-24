@@ -61,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
   <li><a href="#study-design" id="toc-study-design" class="nav-link" data-scroll-target="#study-design">Study Design</a></li>
-  <li><a href="#data-code" id="toc-data-code" class="nav-link" data-scroll-target="#data-code">Data &amp; Code</a></li>
+  <li><a href="#project-resources" id="toc-project-resources" class="nav-link" data-scroll-target="#project-resources">Project Resources</a></li>
   <li><a href="#tools-technologies" id="toc-tools-technologies" class="nav-link" data-scroll-target="#tools-technologies">Tools &amp; Technologies</a></li>
   <li><a href="#expertise" id="toc-expertise" class="nav-link" data-scroll-target="#expertise">Expertise</a></li>
   </ul>
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="executive-summary" class="level2">
 <h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
-<p><strong>Problem:</strong> Norris (2006) argues that proportional electoral systems are the primary driver of women’s representation in governance, pointing to the Nordics, Netherlands, and Rwanda as exemplary cases. This framing privileges electoral system design over other structural factors. An anthropological perspective suggests that universal suffrage and equitable access to education may be equally or more influential – and that place-specific cultural and historical variables may disrupt the regional patterns that proportional representation theory predicts.</p>
+<p><strong>Problem:</strong> <a href="https://doi.org/10.1057/palgrave.ap.5500151">Norris (2006)</a> argues that proportional electoral systems are the primary driver of women’s representation in governance, pointing to the Nordics, Netherlands, and Rwanda as exemplary cases. This framing privileges electoral system design over other structural factors. An anthropological perspective suggests that universal suffrage and equitable access to education may be equally or more influential – and that place-specific cultural and historical variables may disrupt the regional patterns that proportional representation theory predicts.</p>
 <p><strong>Approach:</strong> Combined V-Dem and World Bank data to examine four variables across six world regions from 2003 onward: egalitarian democracy index, share of population with suffrage, women’s representation in national governance, and gender parity in primary and secondary education. Correlation analysis quantified variable relationships across the full dataset; an animated visualization tracked regional dynamics year by year; and comparative median and IQR tables for selected affluent and notable countries tested whether regional patterns hold at the country level.</p>
 <p><strong>Implications:</strong> Women’s representation in governance correlates strongly with educational gender parity and egalitarian democracy at the regional level, but this relationship breaks down at the country level in ways that proportional representation theory does not predict. Affluent countries – including the US, Japan, and China – underperform on women’s empowerment relative to their wealth and democracy scores. Less affluent countries such as Mexico, Rwanda, Lithuania, and Czechia outperform expectations. Policy aimed at increasing women’s representation should prioritize universal suffrage and equitable educational access alongside electoral system reform – and account for place-specific variables that regional frameworks obscure.</p>
 <p><strong>Significance:</strong> The finding that regional patterns mask significant country-level variation has direct implications for how international development organizations and governance reform programs target interventions. A one-size-fits-all proportional representation prescription misses the structural and cultural factors that explain why some countries outperform and others underperform their regional peers.</p>
@@ -151,8 +151,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="strong-positive-correlation-across-all-variables" class="level3">
 <h3 class="anchored" data-anchor-id="strong-positive-correlation-across-all-variables">Strong Positive Correlation Across All Variables</h3>
 <p>Pearson correlation analysis across the full dataset shows a significant positive correlation among all four variables: egalitarian democracy, suffrage, women’s representation in governance, and gender parity in education. The correlation plot displays coefficients above the diagonal (asterisk denotes p &lt; 0.05), histograms on the diagonal, and loess-smoothed bivariate scatterplots below the diagonal with density ellipses highlighting the densest regions.</p>
-<p><em>Figure 1. Correlation matrix for democracy and women’s empowerment variables, 2003 onward.</em></p>
+<p><strong>Figure 1. Correlation matrix for democracy and women’s empowerment variables, 2003 onward.</strong></p>
 <p><img src="correlation_plot.png" class="img-fluid"></p>
+<p><strong>Interpretation:</strong> All four variables move together – countries with higher egalitarian democracy scores tend to have higher suffrage, better educational gender parity, and greater women’s representation in governance. The strength of these correlations at the aggregate level sets up the central question: do they hold when examined region by region and country by country?</p>
 <p><strong>Regional Mean Values</strong></p>
 <table class="caption-top table">
 <thead>
@@ -319,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="regional-dynamics-africa-shows-the-most-change-over-time">Regional Dynamics: Africa Shows the Most Change Over Time</h3>
 <p>The animated visualization tracks educational gender parity (x-axis), egalitarian democracy (y-axis), and women’s representation (point size) by region from 2003 onward. The West and Eastern Europe show relatively stable trajectories – high educational parity and egalitarian democracy with moderate-to-high women’s representation, changing little year to year. Africa shows the greatest temporal variation, which is consistent with the region’s diversity: 55 countries spanning the bulk of global cultural and genetic variation, with significant post-colonial political upheaval shaping trajectories differently across countries and decades.</p>
 <p>The Middle East presents a particular dichotomy: some countries show high educational gender parity but very low women’s representation, suggesting that access to education has not translated into political participation – likely due to legal and cultural barriers that operate independently of educational attainment.</p>
-<p><em>Figure 2. Animated visualization of gender education parity, egalitarian democracy, and women’s representation by region, 2003 onward. Point size reflects women’s representation; color reflects region.</em></p>
+<p><strong>Figure 2. Animated visualization of gender education parity, egalitarian democracy, and women’s representation by region, 2003 onward. Point size reflects women’s representation; color reflects region.</strong></p>
 <p><img src="women_governance_animation.gif" class="img-fluid"></p>
 <p><strong>Interpretation:</strong> Regional trajectories are not uniform. The static picture from correlation analysis obscures substantial within-region variation over time, particularly in Africa and the Middle East. Temporal dynamics matter for understanding where change is happening and where structural barriers persist.</p>
 </section>
@@ -627,24 +628,39 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <hr>
 </section>
-<section id="data-code" class="level2">
-<h2 class="anchored" data-anchor-id="data-code">Data &amp; Code</h2>
-<p><strong>Repository:</strong> <a href="https://github.com/kchoover14/women-governance-empowerment">github.com/kchoover14/women-governance-empowerment</a></p>
-<p><strong>Available:</strong></p>
+<section id="project-resources" class="level2">
+<h2 class="anchored" data-anchor-id="project-resources">Project Resources</h2>
+<p><strong>Repository:</strong> <a href="https://github.com/kchoover14/education-fosters-inclusive-governance">github.com/kchoover14/education-fosters-inclusive-governance</a></p>
+<p><strong>Data:</strong></p>
 <ul>
-<li>R analysis script</li>
-<li>Rendered HTML output with animated figure</li>
-<li>CSV exports of regional and country summary tables</li>
+<li>V-Dem accessed via the <code>vdemdata</code> R package (freely available)</li>
+<li>World Bank data accessed via <code>wbstats</code> (freely available). <em>Note: No data files included in repo – both sources are accessed directly via their R packages.</em></li>
+</ul>
+<p><strong>Code:</strong></p>
+<ul>
+<li><code>education-fosters-inclusive-governance.R</code> – full analysis script: data merge, correlation matrix, animated visualization, regional and country summary tables</li>
+</ul>
+<p><strong>Project Artifacts:</strong></p>
+<ul>
+<li>Figures (n=1 static correlation plot, n=1 animated GIF)</li>
+<li>Summary tables (n=2 regional, n=2 country-level median and IQR)</li>
+</ul>
+<p><strong>Environment:</strong></p>
+<ul>
+<li><code>renv.lock</code> and <code>renv/</code> – restore package environment with <code>renv::restore()</code></li>
+</ul>
+<p><strong>License:</strong></p>
+<ul>
+<li>Code and scripts © Kara C. Hoover, licensed under the <a href="LICENSE">MIT License</a>.</li>
+<li>Data, figures, and written content © Kara C. Hoover, licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</li>
 </ul>
 <hr>
 </section>
 <section id="tools-technologies" class="level2">
 <h2 class="anchored" data-anchor-id="tools-technologies">Tools &amp; Technologies</h2>
-<ul>
-<li><strong>Languages:</strong> R</li>
-<li><strong>Tools:</strong> RStudio, GitHub</li>
-<li><strong>Packages:</strong> <code>vdemdata</code>, <code>wbstats</code>, <code>countrycode</code>, <code>dplyr</code>, <code>ggplot2</code>, <code>gganimate</code>, <code>gifski</code>, <code>psych</code>, <code>glue</code></li>
-</ul>
+<p><strong>Languages:</strong> R</p>
+<p><strong>Tools:</strong> RStudio | GitHub</p>
+<p><strong>Packages:</strong> vdemdata | wbstats | countrycode | dplyr | ggplot2 | gganimate | gifski | psych | glue</p>
 <hr>
 </section>
 <section id="expertise" class="level2">

@@ -1,6 +1,6 @@
-# Women's Representation in Governance Tracks Educational Equity Regionally but Diverges at the Country Level
+## Women's Representation in Governance
 
-This project combines V-Dem and World Bank data to examine whether women's representation in governance correlates with educational gender parity, suffrage, and egalitarian democracy across six world regions from 2003 onward. Correlation analysis, an animated year-by-year visualization, and comparative median and IQR tables for selected affluent and notable countries test whether regional patterns hold at the country level. The core finding: while all four variables correlate strongly at the regional level, country-level data consistently disrupts the pattern -- affluent countries including the US, Japan, and China underperform on women's empowerment, while less affluent countries such as Rwanda (women's representation median of 61.25), Mexico, and Czechia outperform expectations in ways that proportional representation theory alone cannot explain.
+This project combines V-Dem and World Bank data to test whether educational gender parity and egalitarian democracy predict women's representation in governance more strongly than proportional electoral system design across six world regions from 2003 onward. Correlation analysis, an animated year-by-year visualization, and comparative median and IQR tables for selected affluent and notable countries examine the hypothesis. The core finding: educational equity and egalitarian democracy are stronger regional predictors than electoral system design -- but both frameworks break down at the country level, where place-specific legal structures, cultural norms, and historical factors are doing explanatory work that neither model fully captures.
 
 ## Portfolio Page
 
@@ -9,7 +9,9 @@ The [portfolio page](https://kchoover14.github.io/education-fosters-inclusive-go
 ## Tools & Technologies
 
 **Languages:** R
+
 **Tools:** RStudio | GitHub
+
 **Packages:** vdemdata | wbstats | countrycode | dplyr | ggplot2 | gganimate | gifski | psych | glue
 
 ## Expertise
